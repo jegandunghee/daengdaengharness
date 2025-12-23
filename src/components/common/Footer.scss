@@ -6,20 +6,17 @@
     padding:0 10rem;
     background-color: var(--green);
     padding: 4rem 10rem;
+    @include flex-layout(row, space-between,  flex-end);
         .footer-logo{
             img{
                 width: 10rem;
                 height: 5rem;
             }
         }
-    .footer-full {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
         /* 왼쪽 텍스트 */
         .footer-ment {
             p {
-                margin-bottom: 0.5rem;
+                margin-bottom: 2rem;
                 font-size: 0.9rem;
                 color: var(--white);
                 @include font-s-1;
@@ -28,6 +25,7 @@
         }
         /* 브랜드 아이콘 */
         .footer-brands {
+            margin-bottom: 2rem;
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
@@ -42,5 +40,5 @@
                 height: 18rem;
             }
     }
-}
+
 

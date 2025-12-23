@@ -6,11 +6,10 @@ import "./Footer.scss";
 const Footer = () => {
     return (
         <div className="footer">
-        <div className="footer-logo">
-            <img src={logoImg} alt="로고" />
-        </div>
-        <div className="footer-full">
             <div className="footer-ment">
+            <div className="footer-logo">
+                <img src={logoImg} alt="로고" />
+            </div>
             <p>대표자 : 김댕댕</p>
             <p>사업장 주소 : 서울특별시 마포구 월드컵북로 402, 3층</p>
             <p>이메일 : dangdangharness@ddhane.co.kr</p>
@@ -20,7 +19,6 @@ const Footer = () => {
             <img src={insta} alt="인스타그램" />
             </div>
             <img src={ex} alt="임시 사진" className="footer-ex" />
-        </div>
         </div>
     )
 }
