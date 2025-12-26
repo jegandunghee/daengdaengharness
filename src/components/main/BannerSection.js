@@ -1,28 +1,41 @@
 import "./BannerSection.scss";
-import bannerImg01 from "../../assets/images/banner/Banner01.png"
-import bannerImg02 from "../../assets/images/banner/Banner02.png"
-import bannerImg03 from "../../assets/images/banner/Banner03.png"
+import bannerImg01 from "../../assets/images/banner/Banner01.png";
+import bannerImg02 from "../../assets/images/banner/Banner02.png";
+import bannerImg03 from "../../assets/images/banner/Banner03.png";
 
 import { useEffect, useState, useRef } from "react"; 
 
 const BannerSection = () => {
-    // 원본 3장 + 마지막에 1번을 복제(클론)해서 4장처럼 굴림
     // 0: 1번, 1: 2번, 2: 3번, 3: (복제 1번)
     const [idx, setIdx] = useState(0);
-
-    // 트렌지션을 잠깐 끄는 스위치 (복제 -> 진짜 1번으로 순간이동 할 때만)
-    const [animate, setAnimate] = useState(true);
-    // setInterval 정리용
+    
+    // 트랜지션 제어용 (true면 애니메이션 켜짐, false면 꺼짐)
+    const [isAnimating, setIsAnimating] = useState(true);
+    
     const timeRef = useRef(null);
 
-    // 자동 슬라이드 만들기
-    useErffct = (()=>{
-        // 자동 슬라이드 시작
-        // 클론 방식은 넘어가는 게 자연스러워야해서 % 사용하지 않음
-        timeRef.current = setInterval(()=>{  //setInterval( 함수, 시간 ) : 시간마다 함수를 반복 실행해주는 자바스크립트 
+    // 1. 자동 슬라이드 (3초마다 idx 증가)
+    useEffect(() => {
+        timeRef.current = setInterval(() => {
             setIdx((prev) => prev + 1);
+            setIsAnimating(true); // 이동할 때는 항상 애니메이션 켜기
         }, 3000);
-    })
+
+        return () => clearInterval(timeRef.current);
+    }, []);
+
+    // 2. 무한 슬라이드 눈속임 (Clone 로직)
+    useEffect(() => {
+        // 마지막 복제 슬라이드(3번 인덱스)에 도달했다면
+        if (idx === 3) {
+            // 0.5초(CSS transition 시간) 기다렸다가
+            setTimeout(() => {
+                setIsAnimating(false); // 애니메이션 끄기 (순간이동을 위해)
+                setIdx(0); // 진짜 1번(인덱스 0)으로 위치 초기화
+            }, 500); 
+        }
+    }, [idx]);
+
     return (
         <section id="sec-banner">
             <div className="bnr-wrap">
@@ -47,13 +60,15 @@ const BannerSection = () => {
                         </div>
                         <img src={bannerImg03} alt="배너 이미지 03" />
                     </div>
-                    <div className="bnr-sec01">
+                    
+                    {/* 마지막에 붙은 1번 복제본 */}
+                    <div className="bnr-sec01 clone">
                         <img src={bannerImg01} alt="배너 이미지 01(복제)" />
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default BannerSection
+export default BannerSection;

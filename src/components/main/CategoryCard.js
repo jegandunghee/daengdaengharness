@@ -2,8 +2,6 @@
 import "./CategoryCard.scss";
 import productsData from "../../assets/data/products.json";
 
-const imgContext = require.context("../../assets/images", true);
-
 const CategoryCard = () => {
 
     const products = productsData?.Product ?? [];
@@ -19,9 +17,9 @@ const CategoryCard = () => {
      * -> require.context 경로 "./Harness/Htype1-1.png" 로 변환해야 함
      */
     const getImgSrc = (jsonPath) => {
-        // "/images/Harness/Htype1-1.png" -> "./Harness/Htype1-1.png"
-        const fixedPath = jsonPath.replace("/images/", "./");
-        return imgContext(fixedPath);
+        // "/images/Harness/Htype1-1.png" -> "./Harness/Htype1-1.png"        
+        const imgPath =  require(`../../assets${jsonPath}`);  
+        return imgPath;
     };
 
     const titleById = {
