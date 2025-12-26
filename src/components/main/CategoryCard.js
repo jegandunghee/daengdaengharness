@@ -46,7 +46,6 @@ const CategoryCard = () => {
 
                             {/* 이미지: JSON 경로를 getImgSrc로 변환해서 넣기 */}
                             <img className="cd-img" src={getImgSrc(item.img1)} alt={item.prod_name} />
-
                             <p className="cd-go">보러가기</p>
                         </div>
                     </div>

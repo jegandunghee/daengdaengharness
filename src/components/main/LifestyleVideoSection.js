@@ -1,10 +1,11 @@
 import "./LifestyleVideoSection.scss";
 import videoData from "../../assets/images/video/BannerVideo.webm";
-
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 //플러그인 등록
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
