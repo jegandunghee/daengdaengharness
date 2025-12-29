@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/daengdaengharness/static/css/main.4879ebba.css",
-    "main.js": "/daengdaengharness/static/js/main.870f000a.js",
+    "main.js": "/daengdaengharness/static/js/main.0de4eabc.js",
     "static/media/BannerVideo.webm": "/daengdaengharness/static/media/BannerVideo.ba26c8ad7465f5477c5d.webm",
-    "static/media/detail-A.png": "/daengdaengharness/static/media/detail-A.a2189500b36c1d5c6232.png",
-    "static/media/detail-B.png": "/daengdaengharness/static/media/detail-B.362c2b84213d3a8343a4.png",
-    "static/media/detail-D.png": "/daengdaengharness/static/media/detail-D.88e05ae48cd53ac07d00.png",
-    "static/media/detail-C.png": "/daengdaengharness/static/media/detail-C.be3fb3ad5d343d0abec8.png",
+    "static/media/detail-A.png": "/daengdaengharness/static/media/detail-A.18bf4cd12b6d2e311411.png",
+    "static/media/detail-B.png": "/daengdaengharness/static/media/detail-B.1576c59fe19fc4695ee7.png",
+    "static/media/detail-D.png": "/daengdaengharness/static/media/detail-D.eeb5e5c80a675ff57b9c.png",
+    "static/media/detail-C.png": "/daengdaengharness/static/media/detail-C.085d4ce1fc7e5e14f2cf.png",
     "static/media/Banner02.png": "/daengdaengharness/static/media/Banner02.6e73c5f826676af9847e.png",
     "static/media/Htype1-3.png": "/daengdaengharness/static/media/Htype1-3.80b9e3bb0619812e26fb.png",
     "static/media/g-op-img.png": "/daengdaengharness/static/media/g-op-img.4548cca2c039cdba1b5a.png",
@@ -67,10 +67,10 @@
     "static/media/like.svg": "/daengdaengharness/static/media/like.3d46c44ea02796e7247929366847e6f7.svg",
     "index.html": "/daengdaengharness/index.html",
     "main.4879ebba.css.map": "/daengdaengharness/static/css/main.4879ebba.css.map",
-    "main.870f000a.js.map": "/daengdaengharness/static/js/main.870f000a.js.map"
+    "main.0de4eabc.js.map": "/daengdaengharness/static/js/main.0de4eabc.js.map"
   },
   "entrypoints": [
     "static/css/main.4879ebba.css",
-    "static/js/main.870f000a.js"
+    "static/js/main.0de4eabc.js"
   ]
 }
