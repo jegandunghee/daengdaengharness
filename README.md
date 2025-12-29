@@ -1,11 +1,12 @@
 # [프로젝트 이름]
-> 
+> 댕댕하네's 
+  데스크탑을 기준으로하는 하네스 집중 공략 전문 온라인 쇼핑몰 웹 서비스
 
 ## 1. 프로젝트 소개
 * **설명:** 기획부터 디자인, 개발까지 직접 참여하였으며, **Mock Data(JSON)**를 활용해 실제 커머스 로직을 구현한 SPA 쇼핑몰 프로젝트입니다.
 * **진행 기간:** 2025.12.19 ~ 2025.12.26 (N일)
 * **개발 인원:** FrontEnd 5인 (Team Project)
-* **배포 링크:** [바로가기 URL 클릭]
+* **배포 링크:** (https://jegandunghee.github.io/daengdaengharness/)
 
 ## 2. 사용 기술 스택 (Tech Stack)
 * **Language:** JavaScript (ES6+)
